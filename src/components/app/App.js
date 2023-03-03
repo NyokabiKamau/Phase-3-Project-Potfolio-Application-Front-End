@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route} from 'react-router-dom';
 
 import Home from "../home/home";
-import Profile from "../project/project";
+import Project from "../project/project";
 import Header from '../navbar/header';
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/projects" element={<Profile />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
       </main>
     </div>
