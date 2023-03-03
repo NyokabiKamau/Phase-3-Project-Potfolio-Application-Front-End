@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+* created the react app in the current directory using the command <code>npx create-react-app@latest .</code>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
