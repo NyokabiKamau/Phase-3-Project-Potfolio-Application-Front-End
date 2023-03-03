@@ -6,11 +6,7 @@ function Logo() {
     return (
       <div>
           <div className="logo-wrap">
-            <div 
-              id="logo" 
-              className='logo' 
-              alt="Brand logo"
-              >
+            <div id="logo" className='logo' alt="Brand logo" >
                <Link className="navbar-brand navbar-logo text-white" to="/" exact="true"> < CiUser id="Ci-user" /></ Link>
             </div>
           </div>
