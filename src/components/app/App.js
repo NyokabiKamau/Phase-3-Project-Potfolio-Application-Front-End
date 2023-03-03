@@ -1,17 +1,19 @@
-import Navbar from '../navbar/navbar';
 import './App.css';
 import { Routes, Route} from 'react-router-dom';
 
 import Home from "../home/home";
-import Profile from "../profile/profile";
+import Profile from "../project/project";
+import Header from '../navbar/header';
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Header/>
+      <div className='mt-5'>
+      </div>
       <main>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/projects" element={<Profile />} />
         </Routes>
       </main>
     </div>
