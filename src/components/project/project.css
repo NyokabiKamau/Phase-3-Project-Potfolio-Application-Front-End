@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgb(203, 111, 94);
+}
+
+h1 {
+    text-align: center;
+}
