@@ -1,0 +1,43 @@
+#head {
+    margin: 10px;
+    padding: 100px;
+}
+
+
+.App-li { 
+    align-self: center; 
+    justify-self: center; 
+    width: 65vw; 
+    min-width: 600px; 
+    height: auto; 
+    padding: 10px; 
+    margin: 10px 0; 
+    background: rgb(252, 234, 234); 
+    color: black; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 7px 15px black; 
+    animation: App-slide-up .6s ease; 
+}
+
+.App-li h2 {
+    text-align: center;
+    font-family: sans;
+    margin: 30px 0px 40px;
+    font-size: 30px;
+    text-decoration: underline;
+    color: black;
+}
+
+#delete {
+    background: #a88181;
+    /* color: #ac1414; */
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 40px;
+}
