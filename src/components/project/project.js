@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ProjectItem from "./project-items";
 import './project.css'
+// import UpdateProject from "./update-project";
 
 const PROJECT_API = "http://127.0.0.1:9292/projects"
 
-function Project() {
-
-    const [projects, setProject] = useState([])
+function Project({}) {
+    const [project, setProject] = useState([])
 
     useEffect(() => {
         fetch(PROJECT_API)
@@ -26,7 +26,7 @@ function Project() {
         })
     }
 
-    const list = projects.map((project) => {
+    const list = project.map((project) => {
         return (
             <ProjectItem 
             key={project.id}
@@ -39,9 +39,12 @@ function Project() {
     } )
 
     return (
-        <div>
+        <div> 
             <h1>Project</h1>
-            {list}
+            <div>
+                {list}
+            </div>
+            
         </div>
     )
 }
