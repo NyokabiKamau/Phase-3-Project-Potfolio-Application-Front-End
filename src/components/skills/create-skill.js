@@ -1,61 +1,68 @@
 import React, { useState } from "react";
 
 import './create-skill.css'
-// MAIN ----------------------
+
 function CreateSkill() {
-    const [inputText, setInputText] = useState(
-        {
-            name: ""
-        }
-    );
-    const [items, setItems] = useState([]);
+    const [name, setName] = useState([])
+    const [user, setUser] = useState([])
+    const [items, setItems] = useState([])
 
-    // function handleSubmit(e){
-    //     e.preventDefault();
-    //     e.target.reset();
-    //     fetch('http://127.0.0.1:9292/projects/create',
-    //       {
-    //         method:"POST",
-    //         headers:{
-    //           "Content-Type":"application/json",
-    //           "Application":"application/json"
-    //         },
-    //         body:JSON.stringify(inputText)
-    // })
-    // .then(res=>res.json())
-    // .then(data=>console.log(data))
-    // .catch(console.error)
-    // }
+   let addData = {
+        "name" : name,
+        "user_id": user
+    }
 
-    const updateText = (e) => {
-        setInputText(e.target.value);
-    };
+    function handleName(e){
+        e.preventDefault()
+        setName(e.target.value)
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (inputText.trim() == "") return;
-        setItems([...items, inputText]);
-        setInputText("");
-        console.log(items);
-    };
+    function handleUser(e){
+        e.preventDefault()
+        setUser(e.target.value)
+    }
+
+
+    function handleSubmit(e) {
+        fetch("https://phase-3-project-potfolio-app-back-end.onrender.com/skills/create", {
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify(addData),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+         });
+    }
 
     const handleDelete = (index) => {
         const newArr = [...items];
         newArr.splice(index, 1);
         setItems(newArr);
-    };
+    }
 
     return (
         <div className="App">
             <header className="App-header">
-                <form onSubmit={handleSubmit}>
+                <h2>Add New Skill</h2>
+                <form onSubmit={e => e.preventDefault()}>
                     <input
                         className="App-input"
-                        onChange={updateText}
-                        value={inputText}
+                        style={{color: "#000000"}}
+                        onChange={handleName}
+                        value={name}
                         placeholder="I need to..."
                     />
-                    <button className="App-submit">+</button>
+                    <input
+                        className="App-input"
+                        style={{color: "#000000"}}
+                        onChange={handleUser}
+                        value={user}
+                        placeholder="User Id"
+                    />
+                    <button onClick={handleSubmit}className="App-submit">+</button>
                 </form>
                 <div className="App-li-wrapper">
                     {items.length === 0 ? (

@@ -2,12 +2,13 @@ import './App.css';
 import { Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
 import Home from "../home/home";
-import Project from "../project/project";
 import Header from '../navbar/header';
 // import Landingpage from '../landingpage/landingpage';
 import Login from '../login/login';
-import CreateProject from '../project/create-project';
+import CreateProject from '../add-project/create-project';
 import Skill from '../skills/skills-data/skills';
+import UserProject from '../user-project/user-project';
+import Project from '../project/project';
 
 
 function App() {
