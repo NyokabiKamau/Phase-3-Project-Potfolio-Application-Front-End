@@ -3,11 +3,26 @@ import React, { useState } from "react"
 
 function Login({setToken}) {
 
+    // setting state
+
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("");
 
-    // 
+    let loginToken = {
+        "email": email,
+        "password_hash": password
+    }
+
+    let registerToken = {
+        "name": username,
+        "email": email,
+        "password_hash": password
+    }
+
+
+    // function to switch forms
+
     function openRegister() {
         const element = document.getElementById('card')
         element.style.transform = "rotateY(-180deg)"
@@ -18,12 +33,15 @@ function Login({setToken}) {
         element.style.transform = "rotateY(0deg)"
     }
 
+
+    // function to navigate to home page after form submission
+
     function showingonLog(){
         const token = {
             email,
             password
         }
-    setToken(token)
+        setToken(token)
     }
 
     function showingonReg(){
@@ -32,19 +50,15 @@ function Login({setToken}) {
             email,
             password
         }
-    setToken(token)
+        setToken(token)
     }
 
-    let loginToken = {
-        "email": email,
-        "password_hash": password
-    }
+   
+    // handling input data in form
 
-
-    let registerToken = {
-        "name": username,
-        "email": email,
-        "password_hash": password
+    function handleUser(e) {
+        e.preventDefault()
+        setUsername(e.target.value)
     }
 
     function handleEmail(e) {
@@ -56,6 +70,9 @@ function Login({setToken}) {
         e.preventDefault()
         setPassword(e.target.value)
     }
+
+
+    // handling onclick buttons
 
     function handleLoginBtn(e) {
         e.preventDefault()
@@ -69,13 +86,11 @@ function Login({setToken}) {
         handleRegister()
     }
 
-    function handleUser(e) {
-        e.preventDefault()
-        setUsername(e.target.value)
-    }
+
+    // handling post requests for data to persist in the database
 
     function handleRegister() {
-        fetch('http://127.0.0.1:9292/auth/register',{
+        fetch('https://phase-3-project-potfolio-app-back-end.onrender.com/auth/register',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,7 +100,7 @@ function Login({setToken}) {
     }
 
     function handleLogIn(){
-        fetch('http://127.0.0.1:9292/auth/login',{
+        fetch('https://phase-3-project-potfolio-app-back-end.onrender.com/auth/login',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -97,6 +112,9 @@ function Login({setToken}) {
             console.log(data)
             })
     }
+
+
+    // handling on form submission 
 
     const handleSubmitOfLog = e => {
         e.preventDefault()
@@ -123,8 +141,10 @@ function Login({setToken}) {
                 <div className="card-t">
                     <div className="inner-box-t" id="card">
                         <div className="card-front-t">
+
                             <h2>REGISTER</h2>
-                            <form onSubmit={(e)=>handleRegister(e)}>
+                            <form onSubmit={handleSubmitOfReg}>
+
                                 <input 
                                 type="text" 
                                 style={{color: "#FFFFFF"}}
@@ -133,20 +153,20 @@ function Login({setToken}) {
                                 className="input-box-t" required 
                                 onChange={handleUser}
                                 />
+
                                 <input type="email" 
                                 style={{color: "#FFFFFF"}} className="input-box-t" placeholder="Your Email" value={email} required onChange={handleEmail}/>
 
                                 <input type="password"  style={{color: "#FFFFFF"}}  className="input-box-t" placeholder="Password" value={password} required onChange={handlePassword}/>
 
                                 <button type="submit" className="submit-btn"  onClick={handleRegisterBtn}>Register</button>
-
-                                <input type="checkbox"/><span>Remember</span>
                             </form>
+
                             <button type="button" className="btn" onClick={openRegister} >I have an account</button>
-                            <a href="">Forget Password</a>
                         </div>
 
-                        <div className="card-back-t">  <h2>LOGIN</h2>
+                        <div className="card-back-t">
+                            <h2>LOGIN</h2>
                             <form onSubmit={handleSubmitOfLog}>
                                 <input type="email" 
                                 style={{color: "#FFFFFF"}}  className="input-box-t" placeholder="Your Email" value={email} required  onChange={handleEmail}/>
@@ -154,10 +174,8 @@ function Login({setToken}) {
                                 <input type="password" className="input-box-t" style={{color: "#FFFFFF"}}  placeholder="Password" value={password} required onChange={handlePassword}/>
 
                                 <button type="submit" className="submit-btn"  onClick={handleLoginBtn}>Login</button>
-                                <input type="checkbox"/><span>Remember</span>
                             </form>
                             <button type="button" className="btn" onClick={openLogin}>I'm New Here</button>
-                            <a href="">Forget Password</a>
                         </div>
                     </div>
                 </div>

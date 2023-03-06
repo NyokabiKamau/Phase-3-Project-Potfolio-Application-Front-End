@@ -36,7 +36,7 @@
     font-size: 25px;
 }
 
-#delete {
+#delete, #edit {
     background: #a88181;
     /* color: #ac1414; */
     border: 0;

@@ -3,9 +3,9 @@ import ProjectItem from "./project-items";
 import './project.css'
 // import UpdateProject from "./update-project";
 
-const PROJECT_API = "http://127.0.0.1:9292/projects"
+const PROJECT_API = `https://phase-3-project-potfolio-app-back-end.onrender.com/projects`
 
-function Project({}) {
+function Project() {
     const [project, setProject] = useState([])
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function Project({}) {
     }, [])
     
     function deleteProject(id){
-        fetch(`http://127.0.0.1:9292//projects/destroy/${id}`,{
+        fetch(`https://phase-3-project-potfolio-app-back-end.onrender.com/projects/destroy/${id}`,{
           method: "DELETE"
         })
         .then(()=>{

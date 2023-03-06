@@ -2,6 +2,7 @@ import React from "react";
 import './project-item.css'
 //import Login from '../login/login'
 import {MdDeleteForever} from 'react-icons/md'
+import {AiFillEdit} from 'react-icons/ai'
 
 function ProjectItem({title, description, deleteProject, id}) {
 
@@ -11,6 +12,7 @@ function ProjectItem({title, description, deleteProject, id}) {
                 <h2>{title}</h2>
                 <p>{description}</p>
                 <button id="delete" onClick={()=> deleteProject(id)}><MdDeleteForever/></button> 
+                <button id="edit"><AiFillEdit/></button>
             </div>
         </div>
     )

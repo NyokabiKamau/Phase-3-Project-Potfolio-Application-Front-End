@@ -1,17 +1,17 @@
 #head {
     margin: 10px;
-    padding: 100px;
+    padding: 50px;
 }
 
 
 .App-li { 
     align-self: center; 
     justify-self: center; 
-    width: 65vw; 
-    min-width: 600px; 
+    width: 35vw; 
+    min-width: 60px; 
     height: auto; 
-    padding: 10px; 
-    margin: 10px 0; 
+    padding: 5px; 
+    /* margin: px 0;  */
     background: rgb(252, 234, 234); 
     color: black; 
     overflow-wrap: break-word; 
@@ -31,13 +31,13 @@
     color: black;
 }
 
-#delete {
+#delete, #edit {
     background: #a88181;
-    /* color: #ac1414; */
     border: 0;
     outline: 0;
     border-radius: 30px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 40px;
+    margin: 10px;
 }

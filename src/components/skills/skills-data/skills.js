@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SkillItem from "./skill-item";
 import './skills.css'
 
-const SKILL_API = "http://127.0.0.1:9292/skills"
+const SKILL_API = "https://phase-3-project-potfolio-app-back-end.onrender.com/skills"
 
 function Skill({}) {
     const [skills, setSkills] = useState([])
@@ -17,7 +17,7 @@ function Skill({}) {
     }, [])
     
     function deleteSkill(id){
-        fetch(`http://127.0.0.1:9292//skills/destroy/${id}`,{
+        fetch(`https://phase-3-project-potfolio-app-back-end.onrender.com/skills/destroy/${id}`,{
           method: "DELETE"
         })
         .then(()=>{
