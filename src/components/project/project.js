@@ -38,8 +38,8 @@ function Project() {
     } )
 
     return (
-        <div id="dive"> 
-            <h1>Project</h1>
+        <div > 
+            <h1 id="dive">Projects</h1>
             <div>
                 {list}
             </div>

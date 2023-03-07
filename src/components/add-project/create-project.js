@@ -40,24 +40,25 @@ const CreateProject = () => {
 
    
     return (
-        <div className="studentbackground">
+        <div>
         <div className="form" onSubmit={e => e.preventDefault()}>
-            <h2>Add New Project</h2>
-            <div className="container">
+            <h2>Add Project</h2>
+            <div className="container" id="for">
                 <form id="student-form">
-                    <label>Project Title</label>
+                    
                     <input
                     type="text"
                     style={{color: "#000000"}}
                     id="name"
+                    placeholder="Project Title"
                     name="title"
                     value={title}
                     onChange={handleTitle}
                     />
 
-                    <label>Project Description</label>
                     <input
                     type="text"
+                    placeholder="Project Description"
                     style={{color: "#000000"}}
                     id="description"
                     name="description"
@@ -65,7 +66,7 @@ const CreateProject = () => {
                     onChange={handleDescription}
                     />
                     
-                    <button onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
+                    <button className="mt-3" onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
                 </form>
             </div>
         </div>

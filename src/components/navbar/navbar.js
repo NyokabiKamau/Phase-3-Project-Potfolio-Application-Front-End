@@ -9,7 +9,7 @@ function Navbar() {
 
     return (
     <nav>
-        <ul className="navbar me-5">
+        <ul className="navbar">
             <li>
                 <Link className="nav-link" to="/" exact="true"><AiOutlineHome id="home" /> </Link>
             </li>

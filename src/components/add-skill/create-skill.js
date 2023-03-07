@@ -34,22 +34,21 @@ function CreateSkill () {
 
    
     return (
-        <div className="studentbackground">
+        <div >
         <div className="form" onSubmit={e => e.preventDefault()}>
-            <h2>Add New Skill</h2>
+            <h2>Add Skill</h2>
             <div className="container">
                 <form id="student-form">
-                    <label>Skill Name</label>
                     <input
                     type="text"
+                    placeholder="Skill Name"
                     style={{color: "#000000"}}
                     id="name"
                     name="name"
                     value={name}
                     onChange={handleName}
                     />
-                    
-                    <button onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
+                    <button className="mt-3" onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
                 </form>
             </div>
         </div>
