@@ -9,7 +9,9 @@ function Logo() {
             <div id="logo" className='logo' alt="Brand logo" >
                <Link className="navbar-brand navbar-logo text-white" to="/" exact="true"> < CiUser id="Ci-user" /></ Link>
             </div>
+
           </div>
+       
       </div>
     );
   }

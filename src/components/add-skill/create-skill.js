@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import '../add-project/create-project.css'
+import {FaPlus} from 'react-icons/fa'
 
 
 function CreateSkill () {
 
     const [name, setName] = useState([])
-    const [user, setUser] = useState([])
 
    let addData = {
-        "name" : name,
-        "user_id": user
+        "name" : name
     }
 
     function handleName(e){
@@ -17,13 +16,8 @@ function CreateSkill () {
         setName(e.target.value)
     }
 
-    function handleUser(e){
-        e.preventDefault()
-        setUser(e.target.value)
-    }
 
-
-    function handleSubmit(e) {
+    function handleSubmit() {
         fetch("https://phase-3-project-potfolio-app-back-end.onrender.com/skills/create", {
             method: 'POST',
             headers:{
@@ -34,6 +28,7 @@ function CreateSkill () {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
+            alert("Successfully added")
          });
     }
 
@@ -53,18 +48,8 @@ function CreateSkill () {
                     value={name}
                     onChange={handleName}
                     />
-
-                    <label>Skill User Id</label>
-                    <input
-                    type="number"
-                    style={{color: "#000000"}}
-                    id="user"
-                    name="user"
-                    value={user}
-                    onChange={handleUser}
-                    />
                     
-                    <button onClick={handleSubmit} id="btn" type="submit">Add</button>
+                    <button onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
                 </form>
             </div>
         </div>

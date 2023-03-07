@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SkillItem from "./skill-item";
 import './skills.css'
 
+
 const SKILL_API = "https://phase-3-project-potfolio-app-back-end.onrender.com/skills"
 
 function Skill({}) {
@@ -37,8 +38,9 @@ function Skill({}) {
     } )
 
     return (
-        <div> 
+        <div > 
             <h1>Skills</h1>
+            
             <div>
                 {list}
             </div>

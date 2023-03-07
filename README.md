@@ -1,72 +1,88 @@
-# Getting Started with Create React App
+# Phase 3 Project
+# Portfolio App
 
-* created the react app in the current directory using the command <code>npx create-react-app@latest .</code>
+## Table of Content
+1. [Requirements](#requirements)
+2. [Minimum Viable Product](#minimum-viable-product)
+3. [User Stories](#user-stories)
+3. [Project Setup](#project-setup)
+    - [Installations](#installations)
+    - [Access](#access)
+4. [Authors](#author)
+5. [License](#license)
+ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
+A portfolio is a professional’s most important tool. You are tasked to create an application that will provide a platform for a professional to manage their online portfolio.
 
-## Available Scripts
+## Minimum Viable Product
+This is an application that has ben created using REACT Framework
 
-In the project directory, you can run:
+Users should be able to register / login to the platform.
+A user should be able to view all their listed projects.
+A user should be able to add a new project to their portfolio.
+A user should be able to update existing project data.
+A user should be able to delete a project.
+A user can have a maximum of 10 skills.
+A user should be able to view their listed skills.
+A user should be able add, update and delete their skills.
+In order to use the application, the user must be logged in.
 
-### `npm start`
+## User Stories
+* A user is directed to an authentification page where they can sign-in or register in order to access the app. 
+* After clicking Register/Login, the user is navigated to the home directory
+* A user can add a project or skill from the home page and it will update to the list shown on the projects and skills page
+* A user can also delete a skill or project clicking on a delete button
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Setup
+To access this project on you local computer, follow the steps below
 
-### `npm test`
+* Open your terminal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Clone this repository: 
+    - Run <code>git clone (git@github.com:NyokabiKamau/https://github.com/NyokabiKamau/phase-3-project-potfolio-application-front-end)</code>
 
-### `npm run build`
+* cd into <code>phase-3-project-potfolio-application-front-end</code>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installations:
 
-### `npm run eject`
+* The react app was built using the command <code>npx create-react-app@latest .</code> 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Run <code>npm install</code> on the terminal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Run <code>npm install -g npm</code> This will make sure you have the newest version of npm. Once this is installed, you should be able to run the npx command.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Open Visual Studio Code:
+    - Run <code>code .</code>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Click on the available files to view the codes used
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Access
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Front-End content on the browser, click on this link:
 
-### Code Splitting
+(https://phase-3-project-potfolio-application-front-end.vercel.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Back-End content on the browser, click on this link:
 
-### Analyzing the Bundle Size
+click on this link  
+https://phase-3-project-potfolio-app-back-end.onrender.com/projects will return the backend database for projects. The path "project in the url is interchangeble based on the set paths."
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Run <code>npm start</code> on your terminal to start the backend json server
 
-### Making a Progressive Web App
+   * or
+   
+   * Runs the app in the development mode.
+    Open [ http://192.168.0.132:3000]( http://192.168.0.132:3000 to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+# Author
+This project was contributed to by: 
+* [Nyokabi Kamau](https://github.com/NyokabiKamau/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# License
+* This project is licensed under GNU General Public License v3

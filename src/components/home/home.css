@@ -131,7 +131,7 @@ h2 {
     color: #951d1d;
 }
 
-.text-box h2 {
+.text-box h2, h1 {
     font-weight: 500;
     font-size: 66px;
     max-width: 550px;
@@ -148,4 +148,10 @@ h2 {
     border-radius: 30px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+#ht {
+    position: absolute;
+    /* top: -1.7rem; */
+    left: 0;
 }

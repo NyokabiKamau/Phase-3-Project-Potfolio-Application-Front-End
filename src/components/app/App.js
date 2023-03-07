@@ -3,11 +3,9 @@ import { Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
 import Home from "../home/home";
 import Header from '../navbar/header';
-// import Landingpage from '../landingpage/landingpage';
 import Login from '../login/login';
 import CreateProject from '../add-project/create-project';
 import Skill from '../skills/skills-data/skills';
-import UserProject from '../user-project/user-project';
 import Project from '../project/project';
 
 
@@ -18,10 +16,10 @@ function App() {
     return <Login setToken={setToken}/>
   }
 
+
   return (
-    <>
-      {/* <Landingpage/> */}
-      {/* <Login/> */}
+    <div>
+
       <Header/>
       <main>
         <Routes>
@@ -33,7 +31,7 @@ function App() {
         </Routes>
       </main>
      
-    </>
+    </div>
   )
 }
 

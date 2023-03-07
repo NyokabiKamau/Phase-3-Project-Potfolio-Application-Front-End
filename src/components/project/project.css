@@ -4,10 +4,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background: rgb(203, 111, 94);
-}
-
 h1 {
     text-align: center;
+    justify-content: center;
+    font-family: sans;
+}
+
+#div {
+    background-color: rgb(93, 61, 61)
 }

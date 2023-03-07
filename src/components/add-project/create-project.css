@@ -10,46 +10,6 @@ main{
     width: 100%;
     padding: 20px;
 }
-.sidebar{
-    background: #000;
-    color: #fff;
-    height: 100vh;
-    width: 300px;transition: all 0.5s;
-
-}
-.top-section{
-    display:flex;
-    align-items: center;
-    padding: 20px 15px;
-}
-.logo{
-    font-size: 30px;
-}
-.bars{
-    display: flex;
-    font-size: 25px;
-    margin-left: 50px;
-}
-.link{
-    display: flex;
-    color: #fff;
-    padding: 10px 15px;
-    gap: 15px;
-    transition: all 0.5s;
-}
-.link:hover{
-    background: lightskyblue;
-    color: #000;
-    transition: all 0.5s;
-}
-.active{
-    background: lightskyblue;
-    color: #000;
-}
-.icon, .link_text{
-    font-size: 20px;
-
-}
 
 /* styling student form */
 .form{
@@ -57,10 +17,11 @@ main{
     margin-top: 5%;
     width: 50%;
     height: 100%;
-    background: white;
+    background: rgb(112, 67, 67);
     padding-left: 4%;
     padding-right: 5%;
     margin-left: 20%;
+    color: white;
   }
   .form h2{
     color: black;
@@ -78,24 +39,7 @@ main{
     margin-top: 3%;
     margin-bottom: 2%;
   }
-  input[type=number]{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: black;
-    margin-top: 3%;
-    margin-bottom: 2%;
-  }
-  input[type=email]{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: black;
-    margin-top: 3%;
-    margin-bottom: 2%;
-  }
+
   #btn{
     background-color: #69a5d0;
     padding:1% 3%;
@@ -103,19 +47,11 @@ main{
     border: none;
   }
   .studentbackground{
-    border: solid white;
+    border: solid rgb(245, 241, 241);
     width: 95%;
     height: 95%;
-
-    background-image: url("https://images.unsplash.com/photo-1503676593575-d732ab11be71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1477&q=80");
   }
-  .studentbackground2{
-    border: solid white;
-    width: 95%;
-    height: 95%;
-    background-image: url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
-  }
-
+ 
   /* styling dashboard table */
   td {
     text-align: center;
@@ -157,3 +93,11 @@ main{
     size: 48px;
     color: limegreen;
   }
+
+  #addBtn {
+    font-size: 35px;
+    padding: 0px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  

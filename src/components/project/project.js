@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProjectItem from "./project-items";
 import './project.css'
-// import UpdateProject from "./update-project";
 
 const PROJECT_API = `https://phase-3-project-potfolio-app-back-end.onrender.com/projects`
 
@@ -39,7 +38,7 @@ function Project() {
     } )
 
     return (
-        <div> 
+        <div id="dive"> 
             <h1>Project</h1>
             <div>
                 {list}

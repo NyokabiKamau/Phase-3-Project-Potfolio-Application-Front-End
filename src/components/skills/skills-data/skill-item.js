@@ -1,7 +1,7 @@
 import React from "react";
 import './skill-item.css'
 import {MdDeleteForever} from 'react-icons/md'
-import {AiFillEdit} from 'react-icons/ai'
+
 
 function SkillItem({name, deleteSkill, id}) {
 
@@ -10,7 +10,7 @@ function SkillItem({name, deleteSkill, id}) {
             <div key={id} className="App-li">
                 <h2>{name}</h2>
                 <button id="delete" onClick={()=> deleteSkill(id)}><MdDeleteForever/></button> 
-                <button id="edit"><AiFillEdit/></button>
+                
             </div>
         </div>
     )

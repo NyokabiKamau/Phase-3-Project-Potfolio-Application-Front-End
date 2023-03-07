@@ -1,6 +1,7 @@
-#head {
+#hd {
     margin: 10px;
     padding: 100px;
+    
 }
 
 
@@ -8,11 +9,11 @@
     align-self: center; 
     justify-self: center; 
     width: 65vw; 
-    min-width: 600px; 
+    min-width: 500px; 
     height: auto; 
     padding: 10px; 
     margin: 10px 0; 
-    background: rgb(252, 234, 234); 
+    background: rgb(180, 157, 157); 
     color: black; 
     overflow-wrap: break-word; 
     word-wrap: break-word; 
@@ -36,7 +37,7 @@
     font-size: 25px;
 }
 
-#delete, #edit {
+#delete {
     background: #a88181;
     /* color: #ac1414; */
     border: 0;

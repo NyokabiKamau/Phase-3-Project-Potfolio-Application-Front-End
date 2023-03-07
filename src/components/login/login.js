@@ -138,10 +138,15 @@ function Login({setToken}) {
     return (
         <div>
             <div className="container-t">
+                <div id="htitle">
+                    <h2 className='ms-5'><span>PORTFOLIO</span> DEV</h2>
+                    <p className='ms-5'>A Portfolio App made Just for you </p>
+                </div>
                 <div className="card-t">
                     <div className="inner-box-t" id="card">
+                        
                         <div className="card-front-t">
-
+                            
                             <h2>REGISTER</h2>
                             <form onSubmit={handleSubmitOfReg}>
 

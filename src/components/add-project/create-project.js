@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import './create-project.css'
-
-
+import {FaPlus} from 'react-icons/fa'
 const CreateProject = () => {
 
     //const [project, setProject] = useState([])
     const [title, setTitle] = useState([])
     const [description, setDescription] = useState([])
-    const [user, setUser] = useState([])
 
    let addData = {
         "title" : title,
         "description": description,
-        "user_id": user
     }
 
     function handleTitle(e){
@@ -23,11 +20,6 @@ const CreateProject = () => {
     function handleDescription(e){
         e.preventDefault()
         setDescription(e.target.value)
-    }
-
-    function handleUser(e){
-        e.preventDefault()
-        setUser(e.target.value)
     }
 
 
@@ -42,6 +34,7 @@ const CreateProject = () => {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
+            alert("Successfully added")
          });
     }
 
@@ -72,17 +65,7 @@ const CreateProject = () => {
                     onChange={handleDescription}
                     />
                     
-                    <label>Project User Id</label>
-                    <input
-                    type="number"
-                    style={{color: "#000000"}}
-                    id="user"
-                    name="user"
-                    value={user}
-                    onChange={handleUser}
-                    />
-                    
-                    <button onClick={handleSubmit} id="btn" type="submit">Add</button>
+                    <button onClick={handleSubmit} id="addBtn" type="submit"><FaPlus/></button>
                 </form>
             </div>
         </div>
